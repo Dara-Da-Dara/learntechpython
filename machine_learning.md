@@ -283,5 +283,11 @@ print(f"Recall: {recall:.4f}")
 print(f"F1 Score: {f1:.4f}")
 print("Confusion Matrix:")
 print(conf_matrix)
+
+| Type               | Output         | Algorithms                                                                                           |
+| ------------------ | -------------- | ---------------------------------------------------------------------------------------------------- |
+| **Classification** | Class/Category | Logistic Regression, SVM, KNN, Decision Tree, Random Forest, Naive Bayes, XGBoost                    |
+| **Regression**     | Numeric Value  | Linear Regression, Polynomial Regression, SVR, KNN Regression, Decision Tree, Random Forest, XGBoost |
+
 ---
 
