@@ -98,3 +98,112 @@ Machine Learning (ML) is a subset of Artificial Intelligence (AI) that allows sy
 ## Summary
 Machine Learning enables computers to **learn from data** and make intelligent decisions. It is divided mainly into **Supervised, Unsupervised, and Reinforcement Learning**, with applications across industries. The ML workflow involves **data collection, preprocessing, training, evaluation, and deployment**.
 
+# Day 2: Supervised Machine Learning
+
+## 1. What is Supervised Learning?
+Supervised Learning is a type of Machine Learning where the model is trained using **labeled data**.  
+- Labeled data means each input comes with the correct output (target/label).  
+- The model **learns the relationship** between input features and the target.
+
+**Goal:** Predict the output for new, unseen inputs.
+
+---
+
+## 2. Types of Supervised Learning
+
+### 2.1 Regression
+- **Used for:** Predicting continuous numeric values.
+- **Output:** A real number.
+- **Examples:**
+  - Predicting house prices
+  - Predicting temperature
+  - Predicting sales revenue
+
+**Common Algorithms:**
+- Linear Regression
+- Polynomial Regression
+- Support Vector Regression (SVR)
+
+---
+
+### 2.2 Classification
+- **Used for:** Predicting discrete categories or classes.
+- **Output:** A label or class.
+- **Examples:**
+  - Email spam detection (spam/not spam)
+  - Disease diagnosis (yes/no)
+  - Handwriting recognition (digits 0–9)
+
+**Common Algorithms:**
+- Logistic Regression
+- Decision Trees
+- Random Forest
+- k-Nearest Neighbors (k-NN)
+- Support Vector Machines (SVM)
+
+---
+
+## 3. Steps in Supervised Learning
+
+1. **Collect Data:** Gather a dataset with input features and corresponding labels.
+2. **Preprocess Data:** Clean data, handle missing values, normalize/scale features, encode categorical variables.
+3. **Split Data:** Divide dataset into:
+   - Training set (e.g., 70–80%)
+   - Testing set (e.g., 20–30%)
+4. **Train Model:** Fit the model on the training set.
+5. **Evaluate Model:** Check performance on the test set using metrics.
+6. **Tune Model:** Optimize hyperparameters or try different algorithms.
+7. **Predict:** Use the model for new unseen data.
+
+---
+
+## 4. Evaluation Metrics
+
+### 4.1 For Regression
+- **Mean Absolute Error (MAE)**
+- **Mean Squared Error (MSE)**
+- **Root Mean Squared Error (RMSE)**
+- **R-squared (R²)**
+
+### 4.2 For Classification
+- **Accuracy**
+- **Precision**
+- **Recall**
+- **F1 Score**
+- **Confusion Matrix**
+
+---
+
+## 5. Python Example: Simple Linear Regression
+
+```python
+# Import libraries
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+
+# Sample dataset
+data = {'Size': [1000, 1500, 2000, 2500, 3000],
+        'Price': [200000, 250000, 300000, 350000, 400000]}
+df = pd.DataFrame(data)
+
+# Features and target
+X = df[['Size']]  # Feature
+y = df['Price']   # Target
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Predict
+y_pred = model.predict(X_test)
+
+# Evaluate
+mse = mean_squared_error(y_test, y_pred)
+print("Mean Squared Error:", mse)
+
