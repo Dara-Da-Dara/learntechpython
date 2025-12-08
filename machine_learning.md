@@ -1,0 +1,100 @@
+# Day 1: Introduction to Machine Learning
+
+## 1. What is Machine Learning?
+Machine Learning (ML) is a subset of Artificial Intelligence (AI) that allows systems to learn from data and make decisions or predictions without being explicitly programmed.
+
+**Key Idea:** Instead of writing rules manually, we teach a computer by providing data.
+
+---
+
+## 2. Types of Machine Learning
+
+### 2.1 Supervised Learning
+- The model is trained on **labeled data** (input + correct output).
+- Goal: Predict output for new, unseen inputs.
+
+**Examples:**
+- Predicting house prices based on features like size, location.
+- Email spam detection.
+
+**Common Algorithms:**
+- Linear Regression
+- Logistic Regression
+- Decision Trees
+- Support Vector Machines (SVM)
+- Neural Networks
+
+---
+
+### 2.2 Unsupervised Learning
+- The model is trained on **unlabeled data** (only inputs, no outputs).
+- Goal: Find hidden patterns or structure in data.
+
+**Examples:**
+- Customer segmentation
+- Market basket analysis
+
+**Common Algorithms:**
+- K-Means Clustering
+- Hierarchical Clustering
+- Principal Component Analysis (PCA)
+
+---
+
+### 2.3 Reinforcement Learning
+- The model **learns by interacting with an environment**.
+- It receives **rewards** for good actions and **penalties** for bad actions.
+
+**Examples:**
+- Self-driving cars
+- Game AI (chess, Go)
+
+---
+
+## 3. Basic ML Workflow
+
+1. **Collect Data:** Gather the dataset needed for the problem.
+2. **Preprocess Data:** Clean data, handle missing values, encode categorical variables.
+3. **Split Data:** Divide into training and testing sets (commonly 80/20).
+4. **Train Model:** Use training data to teach the model.
+5. **Evaluate Model:** Test model on unseen data to check performance.
+6. **Improve Model:** Tune parameters, try different algorithms.
+7. **Deploy Model:** Use the model in real-world applications.
+
+---
+
+## 4. Applications of Machine Learning
+
+- **Healthcare:** Disease prediction, medical imaging analysis
+- **Finance:** Fraud detection, stock price prediction
+- **Retail:** Customer segmentation, recommendation systems
+- **Technology:** Voice assistants, self-driving cars
+- **Agriculture:** Crop yield prediction, pest detection
+
+---
+
+## 5. Key Terms in Machine Learning
+
+- **Feature:** Input variable used to make predictions
+- **Label/Target:** Output variable the model predicts
+- **Model:** Mathematical representation of the relationship between inputs and outputs
+- **Training:** Process of teaching the model using data
+- **Prediction:** Output produced by the model
+- **Overfitting:** Model performs well on training data but poorly on new data
+- **Underfitting:** Model is too simple to capture patterns in data
+
+---
+
+## 6. Python Libraries for ML
+
+- `numpy` – Numerical operations
+- `pandas` – Data manipulation
+- `scikit-learn` – Basic ML algorithms
+- `matplotlib` / `seaborn` – Data visualization
+- `tensorflow` / `pytorch` – Deep learning
+
+---
+
+## Summary
+Machine Learning enables computers to **learn from data** and make intelligent decisions. It is divided mainly into **Supervised, Unsupervised, and Reinforcement Learning**, with applications across industries. The ML workflow involves **data collection, preprocessing, training, evaluation, and deployment**.
+
