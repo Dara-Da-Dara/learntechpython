@@ -60,13 +60,3 @@ This markdown file provides a complete tabular comparison of **PyTorch**, **Tens
 
 ---
 
-## 📌 Code Comparison
-
-### PyTorch Example
-```python
-import torch
-import torch.nn as nn
-
-x = torch.randn(1, 10)
-layer = nn.Linear(10, 2)
-print(layer(x))
