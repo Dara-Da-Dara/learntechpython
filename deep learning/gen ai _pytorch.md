@@ -34,7 +34,7 @@ output = model.generate(
 
 
 
-### no pytorch 
+# no pytorch 
 # pip install transformers
 
 from transformers import pipeline
