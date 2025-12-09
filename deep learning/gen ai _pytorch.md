@@ -30,5 +30,23 @@ output = model.generate(
 )
 
 # Decode generated text
+
+
+
+
+### no pytorch 
+# pip install transformers
+
+from transformers import pipeline
+
+# Create a text-generation pipeline
+generator = pipeline("text-generation", model="gpt2")
+
+# Generate text
+prompt = "Artificial Intelligence is transforming"
+result = generator(prompt, max_length=100, num_return_sequences=1)
+
+print(result[0]['generated_text'])
+
 generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
 print("Generated Text:\n", generated_text)
