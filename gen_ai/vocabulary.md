@@ -1,8 +1,123 @@
-# 📘 Generative AI Vocabulary — 100 Terms with Examples
+# 📘 Generative AI Vocabulary — 100+ Terms with Examples
 
 This document contains 100 essential Generative AI terms with simple definitions and examples.  
 Focus: LLMs, embeddings, prompts, RAG, multimodal AI, APIs, generation, and related concepts.  
 (ML/DL-specific terms like gradient descent, loss, epochs, parameters removed.)
+# AI and LLM Concepts Explained
+
+This document explains key terms in AI and Large Language Models (LLMs) with examples and analogies.
+
+---
+
+## 1. Parameters in Machine Learning and LLMs
+
+* **Definition:** Parameters are the internal "knobs" a model adjusts during training to learn patterns from data. In ML, they include weights and biases; in LLMs, parameters are millions or billions of numbers that determine how the model generates text.
+* **Example in ML:** In a linear regression model, the slope and intercept are parameters.
+* **Example in LLM:** GPT-3 has 175 billion parameters that encode language patterns.
+* **Analogy:** Parameters are like the settings of a complex machine — in LLMs, each number helps the model understand and generate text.
+
+---
+
+## 2. Attention Mechanisms
+
+* **Definition:** Allows a model to focus on the most relevant parts of input data when making predictions.
+* **Example:** In language models, attention helps figure out which words in a sentence matter most for predicting the next word.
+* **Analogy:** Reading a paragraph but highlighting only the key sentences before answering a question.
+* **Tiny Code Example:**
+
+```python
+# Pseudo-code for attention weights
+sentence = ["I", "love", "AI"]
+attention_weights = [0.1, 0.7, 0.2]  # model focuses more on 'love'
+context_vector = sum(word_vec * weight for word_vec, weight in zip(sentence, attention_weights))
+```
+
+---
+
+## 3. Pre-training
+
+* **Definition:** Training a model on a large, general dataset before fine-tuning it for a specific task.
+* **Example:** GPT is pre-trained on vast amounts of internet text to learn general language patterns.
+* **Analogy:** Learning general knowledge in school before specializing in medicine or engineering.
+* **Tiny Code Example:**
+
+```python
+# Pre-training a simple model
+# Imagine training on general text corpus
+model.train(general_corpus)
+```
+
+---
+
+## 4. Fine-tuning
+
+* **Definition:** Adapting a pre-trained model to a specific task or dataset.
+* **Example:** Fine-tuning GPT on legal documents for accurate legal Q&A.
+* **Analogy:** A chef trained in general cooking learning how to specialize in Italian cuisine.
+* **Tiny Code Example:**
+
+```python
+# Fine-tuning on a specific dataset
+model.load_pretrained('GPT')
+model.train(legal_corpus)
+```
+
+---
+
+## 5. Zero-shot Learning
+
+* **Definition:** The ability of a model to perform a task it hasn’t explicitly been trained for, using general knowledge.
+* **Example:** Asking a model to translate a sentence into a language it never saw during training.
+* **Analogy:** Playing a new board game correctly just by reading the rules, without practicing.
+* **Tiny Code Example:**
+
+```python
+# Zero-shot example
+prompt = "Translate 'Hello' to French"
+output = model.generate(prompt)
+print(output)  # Output: 'Bonjour'
+```
+
+---
+
+## 6. Few-shot Learning
+
+* **Definition:** Model learns a task with only a few examples.
+* **Example:** Providing 3 examples of sentiment analysis, then asking the model to predict sentiment for new sentences.
+* **Analogy:** Learning a game by watching only a few rounds.
+
+---
+
+## 7. Tokenization
+
+* **Definition:** Splitting text into small units (words, subwords, or characters) that the model can process.
+* **Example:** "I love AI" → ['I', 'love', 'AI']
+
+---
+
+## 8. Embeddings
+
+* **Definition:** Converting words into numeric vectors so the model can understand relationships between them.
+* **Example:** 'king' and 'queen' have similar embeddings.
+* **Tiny Code Example:**
+
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+sentences = ['I love AI', 'AI is amazing']
+vectorizer = TfidfVectorizer()
+vectors = vectorizer.fit_transform(sentences)
+print(vectors.toarray())
+```
+
+---
+
+## Generative AI Vocabulary
+
+This section introduces key Generative AI terms and concepts for better understanding of AI models and applications.
+
+---
+
+This document provides a beginner-friendly overview of key AI/LLM concepts with examples and analogies.
 
 ---
 
