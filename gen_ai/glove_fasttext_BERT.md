@@ -91,3 +91,90 @@ print(embeddings.shape)  # (batch_size, sequence_length, hidden_size)
 ---
 
 This file now includes **GloVe, FastText, and BERT** embeddings with theory and Python examples.
+
+# Word Embeddings: Word2Vec, GloVe, FastText, and BERT
+
+## 1. Word2Vec
+
+**Word2Vec** is a predictive word embedding model that learns vector representations of words based on their context using **Skip-gram** or **CBOW (Continuous Bag of Words)** models.
+
+### Key Points
+
+* Captures semantic relationships between words.
+* Produces dense vectors.
+* Cannot handle out-of-vocabulary words.
+
+### Python Example
+
+```python
+from gensim.models import Word2Vec
+
+sentences = [['the', 'king', 'is', 'wise'], ['the', 'queen', 'is', 'smart']]
+model = Word2Vec(sentences, vector_size=100, window=5, min_count=1)
+vector_king = model.wv['king']
+print(vector_king)
+```
+
+---
+
+## 2. GloVe
+
+**GloVe** is based on **matrix factorization of word co-occurrence** in a corpus.
+
+### Key Points
+
+* Captures global co-occurrence statistics.
+* Produces dense embeddings.
+* Cannot generate embeddings for unseen words.
+
+---
+
+## 3. FastText
+
+**FastText** represents words as a **bag of character n-grams**.
+
+### Key Points
+
+* Handles rare and out-of-vocabulary words.
+* Captures subword information.
+* Useful for morphologically rich languages.
+
+---
+
+## 4. BERT
+
+**BERT** is a **contextual embedding** model based on **Transformers**.
+
+### Key Points
+
+* Produces different embeddings for the same word depending on context.
+* Excellent for NLP tasks requiring understanding of sentence meaning.
+* Handles word sense disambiguation.
+
+---
+
+## Comparison Table
+
+| Feature               | Word2Vec                   | GloVe                      | FastText                                    | BERT                                 |
+| --------------------- | -------------------------- | -------------------------- | ------------------------------------------- | ------------------------------------ |
+| Type                  | Predictive                 | Count-based                | Subword-based                               | Contextual                           |
+| Captures Context      | Local context              | Global co-occurrence       | Local + subword                             | Full sentence context                |
+| Handles OOV Words     | No                         | No                         | Yes                                         | Yes                                  |
+| Vector Dimensionality | Dense (50-300)             | Dense (50-300)             | Dense (50-300)                              | Large (768-1024)                     |
+| Semantic Similarity   | Good                       | Good                       | Good                                        | Excellent                            |
+| Morphology Awareness  | Low                        | Low                        | High                                        | High                                 |
+| Use Cases             | Similarity, Classification | Similarity, Classification | Rare word handling, Morphological languages | QA, NER, Classification, Translation |
+
+---
+
+## Similarities
+
+* All are used for representing words as vectors.
+* Word2Vec, GloVe, and FastText produce **static embeddings**.
+* BERT produces **contextual embeddings**.
+* All improve NLP tasks like classification, similarity, and clustering.
+
+---
+
+This section now includes a detailed **comparison and similarities** between **Word2Vec, GloVe, FastText, and BERT** with theory, examples, and a comparison table.
+
