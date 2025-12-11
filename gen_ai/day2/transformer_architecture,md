@@ -1,0 +1,124 @@
+# Transformer Architecture – Layman’s Understanding
+
+---
+
+## 1. Input Embeddings
+- **Function:** Converts discrete tokens (words/pieces) into dense vectors the model can process.  
+- **Purpose:** Words as text are meaningless to a model; embeddings give them numeric meaning in a multidimensional space, allowing the model to understand similarities.  
+- **Connectivity:** Feeds into **Positional Encoding**.  
+- **Analogy:** Words are Lego bricks; embeddings turn them into digital Lego pieces with recognizable shapes.
+
+---
+
+## 2. Positional Encoding
+- **Function:** Adds information about the position of each word in the sequence.  
+- **Purpose:** Transformers have no inherent sense of order. Positional encoding ensures the model knows which word comes first, second, etc.  
+- **Connectivity:** Added to the output of Input Embeddings → sent to **Multi-Head Self-Attention**.  
+- **Analogy:** Like putting numbers on train carriages so the model knows the order of cars.
+
+---
+
+## 3. Multi-Head Self-Attention (MHSA)
+- **Function:** Lets the model look at all words in the sentence and determine which words are important relative to each other.  
+- **Purpose:** Captures contextual relationships; for example, understanding that "it" refers to "the cat" in a sentence.  
+- **Connectivity:** Takes Embeddings + Positional Encoding as input → output goes through Residual + LayerNorm → Feed-Forward Network.  
+- **Analogy:** Imagine a student reading a sentence and thinking, “To understand this word, I need to look at these other words in the sentence.”
+
+---
+
+## 4. Scaled Dot-Product Attention
+- **Function:** Calculates attention weights that determine how much focus each word should get relative to others.  
+- **Purpose:** Ensures the model emphasizes important words more while reducing the weight of less relevant words.  
+- **Connectivity:** Internal part of MHSA; outputs feed into Residual + LayerNorm.  
+- **Analogy:** A teacher grading the importance of each word: “This word is very important, that one less so.”
+
+---
+
+## 5. Feed-Forward Network (FFN)
+- **Function:** Applies a non-linear transformation to each word individually.  
+- **Purpose:** Introduces complexity and expressiveness so the model can capture subtle patterns.  
+- **Connectivity:** Takes output from MHSA → Residual + LayerNorm → passes through FFN → adds another Residual + LayerNorm.  
+- **Analogy:** Like a chef individually marinating each ingredient after spices have been mixed.
+
+---
+
+## 6. Residual Connections
+- **Function:** Adds the original input back to the processed output.  
+- **Purpose:** Prevents the model from forgetting the original meaning and helps gradient flow during training.  
+- **Connectivity:** Wraps around MHSA and FFN.  
+- **Analogy:** Like taking your first draft notes and combining them with improved notes so nothing is lost.
+
+---
+
+## 7. Layer Normalization
+- **Function:** Normalizes the activations across the features of each token.  
+- **Purpose:** Stabilizes learning and ensures consistent input scale across layers.  
+- **Connectivity:** Applied after residual connections.  
+- **Analogy:** Like lining up your books neatly so you can easily find the one you need next.
+
+---
+
+## 8. Dropout
+- **Function:** Randomly ignores certain neurons during training.  
+- **Purpose:** Prevents overfitting and improves generalization.  
+- **Connectivity:** Applied in MHSA, FFN, and sometimes embeddings.  
+- **Analogy:** Like practicing a speech without reading some lines to remember it better.
+
+---
+
+## 9. Encoder Block
+- **Function:** Processes input to produce contextualized representations of each token.  
+- **Purpose:** Captures dependencies and relationships between words in the input.  
+- **Connectivity:** Stack of MHSA → FFN with Residual + LayerNorm → output to next encoder layer or decoder.  
+- **Analogy:** Like a team of editors polishing a sentence before passing it to a translator.
+
+---
+
+## 10. Decoder Block
+- **Function:** Generates the output sequence step by step.  
+- **Purpose:** Uses input context to predict the next token while attending to previously generated tokens.  
+- **Connectivity:** Stack of Masked MHSA → Encoder-Decoder Attention → FFN → Residual + LayerNorm → Output Layer.  
+- **Analogy:** Like a translator: looks at the original sentence, checks what’s already translated, and writes the next word.
+
+---
+
+## 11. Masking
+- **Function:** Prevents the model from seeing future tokens or irrelevant padding.  
+- **Purpose:** Ensures predictions are causal (future words not seen) and avoids errors from padded sequences.  
+- **Connectivity:** Applied inside attention layers.  
+- **Analogy:** Like covering the next words while doing a fill-in-the-blank quiz.
+
+---
+
+## 12. Output Layer (Linear + Softmax)
+- **Function:** Converts the decoder’s hidden states into probabilities for each word in the vocabulary.  
+- **Purpose:** Allows the model to choose the most likely next word.  
+- **Connectivity:** Input is the final decoder output → outputs probability distribution.  
+- **Analogy:** Like a voting system picking the most likely next word.
+
+---
+
+## 13. Embedding Tying
+- **Function:** Shares weights between input embeddings and output projections.  
+- **Purpose:** Saves parameters and ensures input and output representations are consistent.  
+- **Connectivity:** Links input embedding matrix ↔ output projection.  
+- **Analogy:** Like using the same dictionary for reading and writing.
+
+---
+
+## 14. Attention Masking
+- **Function:** Ensures attention only considers valid tokens.  
+- **Purpose:** Avoids focusing on irrelevant or empty tokens.  
+- **Connectivity:** Applied in MHSA or decoder’s masked attention.  
+- **Analogy:** Like ignoring blank spaces in a crossword puzzle while solving it.
+
+---
+
+## **Simplified Data Flow (Layman Version)**
+1. Input words → Lego bricks (embeddings) → numbered train cars (positional encoding)  
+2. MHSA: Words look around and decide what’s important.  
+3. Residual + LayerNorm: Keep original meaning + organize neatly.  
+4. FFN: Each word gets extra “marination” individually.  
+5. Encoder: Understands the sentence fully.  
+6. Decoder: Uses learned info → writes next word carefully (masked + encoder attention).  
+7. Output: Picks the best next word → softmax voting.
