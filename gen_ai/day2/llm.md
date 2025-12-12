@@ -136,7 +136,7 @@ This lesson provides a comparative overview of some of the **most prominent larg
 5. **Instruction Following:** Emphasis on alignment, safety, and better human-computer interaction (Anthropic Claude, LLaMA 2/3).  
 
 ---
-
+### Phi-1 (2023), Phi-2 (late 2023/early 2024), Phi-3 (April 2024) (Mini 3.8B, Medium 7B, Large 14B), and Phi-3.5 (August 2024)
 ### References
 1. OpenAI GPT papers: [GPT-1](https://openai.com/research/language-unsupervised), [GPT-2](https://openai.com/research/better-language-models), [GPT-3](https://arxiv.org/abs/2005.14165)  
 2. Meta AI LLaMA: [LLaMA](https://arxiv.org/abs/2302.13971), [LLaMA 2](https://ai.meta.com/llama/)  
