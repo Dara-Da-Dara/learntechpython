@@ -83,3 +83,47 @@ Typical range: 20–100, depending on quality and speed requirements.'
 ---
 
 This code will generate a **high-quality image** based on your text prompt using a **diffusion model**.
+ full code 
+
+# -----------------------------
+# Step 1: Install required libraries
+# -----------------------------
+!pip install torch torchvision diffusers transformers accelerate safetensors --quiet
+
+# -----------------------------
+# Step 2: Import required modules
+# -----------------------------
+import torch
+from diffusers import StableDiffusionPipeline
+from PIL import Image
+
+# -----------------------------
+# Step 3: Load pre-trained Stable Diffusion model
+# -----------------------------
+model_id = "runwayml/stable-diffusion-v1-5"
+
+# Check if GPU is available
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
+# Load the pipeline
+pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16 if device=="cuda" else torch.float32)
+pipe = pipe.to(device)
+
+# -----------------------------
+# Step 4: Generate image from text
+# -----------------------------
+prompt = "A futuristic cityscape at sunset, digital art"
+
+# Optional: improve quality
+guidance_scale = 7.5
+num_inference_steps = 50
+
+image = pipe(prompt, guidance_scale=guidance_scale, num_inference_steps=num_inference_steps).images[0]
+
+# -----------------------------
+# Step 5: Display and save image
+# -----------------------------
+image.show()  # Display in Colab
+image.save("generated_image.png")  # Save as PNG
+print("Image saved as generated_image.png")
+
