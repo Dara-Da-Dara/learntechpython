@@ -56,7 +56,27 @@ image.save("generated_image.png")
 ```python
 image = pipe(prompt, guidance_scale=7.5, num_inference_steps=50).images[0]
 ```
+* 'guidance_scale
 
+Also called classifier-free guidance scale.
+
+Controls how strongly the model follows your text prompt.
+
+Higher values → the image matches your prompt more closely, but may lose creativity or become less natural.
+
+Lower values → the image may be more random, creative, or “artistic,” but might not match the prompt exactly.
+
+Typical range: 5–15, default often around 7.5.'
+
+* num_inference_steps
+
+'This is the number of steps the diffusion model takes to generate the image.
+
+More steps → smoother, higher-quality image, but slower generation.
+
+Fewer steps → faster, but may produce rough or blurry images.
+
+Typical range: 20–100, depending on quality and speed requirements.'
 * `guidance_scale`: Higher values make the image closer to the prompt.
 * `num_inference_steps`: More steps = better quality, but slower.
 
