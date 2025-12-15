@@ -1,6 +1,6 @@
 # LLM Evaluation Metrics and Python Code Explained
 
-This Markdown file combines a detailed explanation of evaluation metrics for LLMs with line-by-line explanation of the Python code.
+This Markdown file combines a detailed explanation of evaluation metrics for LLMs with line-by-line explanation of the Python code, including the example usage explanation.
 
 ---
 
@@ -125,8 +125,11 @@ def llm_evaluation(references: List[str], predictions: List[str]):
 ```
 - Combines scores into dictionary and returns.
 
+---
+
+## 3. Example Usage Explained
+
 ```python
-# Example Usage
 if __name__ == "__main__":
     references = ["The cat sat on the mat","Hello world"]
     predictions = ["The cat is sitting on the mat","Hello there world"]
@@ -135,19 +138,34 @@ if __name__ == "__main__":
     for key, value in results.items():
         print(f"{key}: {value:.4f}")
 ```
-- Example usage of the function with sample references and predictions.
-- Prints results with 4 decimal points.
 
----
+**Explanation:**
 
-## 3. Example Output
+1. `if __name__ == "__main__":`
+   - Ensures this block runs only when the script is executed directly.
 
+2. `references` and `predictions`
+   - Sample texts for testing the function.
+   - `references` contains the correct text, `predictions` contains LLM-generated text.
+
+3. `results = llm_evaluation(references, predictions)`
+   - Calls the function to compute metrics.
+   - Returns a dictionary with BLEU, ROUGE, METEOR scores.
+
+4. `print("LLM Evaluation Metrics:")`
+   - Prints a header for clarity.
+
+5. `for key, value in results.items(): print(f"{key}: {value:.4f}")`
+   - Loops through each metric and prints it with **4 decimal points**.
+
+**Example Output:**
 ```text
-LLM Evaluation Metrics:
 BLEU: 0.4673
 ROUGE: 0.8571
 METEOR: 0.7917
 ```
+
+- Scores closer to 1 indicate better similarity or content coverage.
 
 ---
 
