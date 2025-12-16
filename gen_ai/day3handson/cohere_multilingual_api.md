@@ -10,7 +10,7 @@ Cohere provides multilingual capabilities in both **text generation** and **embe
 - **Models:** `command-a`, `command-r+`
 - **Languages Supported:** English, French, Spanish, Italian, German, Japanese, Korean, Chinese, Arabic, Hindi, Russian, Polish, Turkish, and more.
 - **Use Cases:** Chatbots, translation, summarization, Q&A.
-
+### !pip install cohere
 ### Python Example
 ```python
 import cohere
