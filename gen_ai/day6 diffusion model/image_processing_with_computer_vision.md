@@ -5,7 +5,8 @@
 **Image Processing** is a core area of computer science and artificial intelligence that focuses on analyzing, enhancing, and transforming images using computational techniques. When combined with **Computer Vision (CV)**, image processing enables machines to **understand, interpret, and act upon visual data**.
 
 Image processing deals mainly with **pixel-level operations**, while computer vision focuses on **high-level understanding** such as object recognition, scene interpretation, and decision-making.
-
+### image augumentation 
+** creaeting multiple images"
 ---
 
 ## 2. What is an Image?
