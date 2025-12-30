@@ -1,5 +1,7 @@
 # LangChain Training Program – 
 https://docs.langchain.com/oss/python/langchain/overview
+
+https://github.com/langchain-ai/lca-lc-foundations
 ## Module 1: LLM & LangChain Foundations  
 ### Student Notes (Integrated with Code & Tables)  
 **Duration:** 4 Hours  
