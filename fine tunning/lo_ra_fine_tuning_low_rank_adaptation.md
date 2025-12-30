@@ -4,7 +4,7 @@
 **LoRA (Low-Rank Adaptation)** is a **Parameter-Efficient Fine-Tuning (PEFT)** technique used to adapt large pre-trained models (LLMs, Vision Transformers, Diffusion models) by training only a **small number of additional parameters**, instead of updating all model weights.
 
 The original model weights remain **frozen**, and LoRA learns small trainable matrices that modify the behavior of the model.
-example 1-100 numbers  as llm  , opting 9, 19, 29 , 39--99 as lora 
+#### example 1-100 numbers  as llm  , opting 9, 19, 29 , 39--99 as lora 
 ---
 
 ## 2. Core Idea
