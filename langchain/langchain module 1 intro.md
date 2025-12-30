@@ -1,4 +1,5 @@
-# LangChain Training Program – 50 Hours  
+# LangChain Training Program – 
+https://docs.langchain.com/oss/python/langchain/overview
 ## Module 1: LLM & LangChain Foundations  
 ### Student Notes (Integrated with Code & Tables)  
 **Duration:** 4 Hours  
