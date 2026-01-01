@@ -6,3 +6,5 @@
 ### https://github.com/langchain-ai/lca-lc-foundations/tree/main/notebooks
 
 ### https://hexaware.com/blogs/prompt-driven-development-coding-in-conversation/
+
+### https://docs.google.com/document/d/1rsaK53T3Lg5KoGwvf8ukOUvbELRtH-V0LnOIFDxBryE/edit?tab=t.0
