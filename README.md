@@ -10,3 +10,5 @@
 ### https://docs.google.com/document/d/1rsaK53T3Lg5KoGwvf8ukOUvbELRtH-V0LnOIFDxBryE/edit?tab=t.0
 
 ### https://github.com/microsoft/generative-ai-for-beginners
+
+### chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://media.licdn.com/dms/document/media/v2/D561FAQHVTJXGHC3tNg/feedshare-document-pdf-analyzed/B56Zs7SisXIAAY-/0/1766226281467?e=1768435200&v=beta&t=N3KC3fhj9SF6hwBJQwEreHAlREEAlfLaSGus91NAPOg&acrobatPromotionSource=linkedin_chrome-post_view
