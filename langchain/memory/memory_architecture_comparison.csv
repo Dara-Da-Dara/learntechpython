@@ -1,0 +1,15 @@
+Memory Type,Domain,Persistence Level,Speed (Access Latency),Storage Capacity,Characteristics,Cost
+LSTM Short-term,Traditional ML,Session (Ephemeral),Very Fast (ms),Limited (cell state),"Gate-controlled, ephemeral state",Low (compute)
+LSTM Long-term,Traditional ML,Permanent (Weights),Moderate (training),Large (weight matrix),"Synaptic weights, learn long dependencies",Low (inference)
+Neural Network Weights,Traditional ML,Permanent (Weights),Slow (offline),Large (network params),"Learned parameters, captures patterns",Low (inference)
+Attention Mechanism,LLM Core,Token (Ephemeral),Very Fast (ns),Limited per token,"Focus mechanism, Q-K-V projections",High (quadratic with seq)
+KV Cache (Transformer),LLM Core,Sequence (Ephemeral),Very Fast (ns),Grows with sequence,"Stores computed keys/values, avoids recomputation",High (linear with seq)
+Context Window,LLM Core,Context Window (Ephemeral),Very Fast (ns),Fixed (8K-128K tokens),Fixed input token limit per model,Low (in-context)
+ConversationBufferMemory,LangChain,Session/Memory,Fast (ms),Grows linearly,"Stores all messages, token usage grows",Low-Moderate
+ConversationBufferWindowMemory,LangChain,Window Only (Session),Fast (ms),Fixed window size,"Keeps last K messages, bounded tokens",Low (reduced tokens)
+VectorStoreMemory,LangChain,Persistent (External DB),Moderate (10-100ms),Very Large (Vector DB),"Semantic search via embeddings, retrieval",Moderate-High (vector ops)
+Entity Memory,LangChain,Persistent (External DB),Fast (1-10ms),Large (knowledge base),Facts/attributes about entities/persons,Moderate
+Summary Memory,LangChain,Persistent (Session+),Moderate (10-100ms),Compressed/Efficient,"LLM-generated summaries, token efficient",Moderate
+Zep/Motörhead Server,LangChain,Persistent (External Server),Moderate (50-200ms),Unlimited (server),"Incremental summarization, stateless",Moderate-High (server)
+Redis-Backed Memory,LangChain,Persistent (Redis Server),Very Fast (1-5ms),Large (RAM-based),"In-memory caching, high-speed retrieval",High (Redis license)
+Hierarchical Memory (Brain-inspired),Advanced AI,Multi-tier (Hierarchical),Variable (tiered),Multiple tiers,"Multi-level: short, medium, long-term",Balanced (tiered)
