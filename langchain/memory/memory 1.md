@@ -135,7 +135,7 @@ Some ML systems use **external memory** outside model parameters.
 
 ---
 
-## 10. Importance of Memory in ML
+## 10. Importance of Memory in gen ai and agentic ai 
 - Context awareness
 - Sequential understanding
 - Personalization
