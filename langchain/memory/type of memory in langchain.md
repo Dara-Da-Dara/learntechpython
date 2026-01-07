@@ -10,7 +10,7 @@ This document **elaborates each LangChain memory type** with:
 It is suitable for **hands-on learning, teaching, interviews, and production design**.
 
 ---
-
+#short term memory 
 ## 1. What is Memory in LangChain?
 
 > **Memory in LangChain enables LLM applications to retain and reuse information across interactions, overcoming the stateless nature of language models.**
