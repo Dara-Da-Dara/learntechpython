@@ -1,12 +1,12 @@
 # On-Policy vs Off-Policy Learning and Model-Based vs Model-Free Reinforcement Learning
 
-This Markdown file provides **clear, exam-oriented explanations** of the four fundamental concepts in Reinforcement Learning:
+
 - On-Policy Learning
 - Off-Policy Learning
 - Model-Based Reinforcement Learning
 - Model-Free Reinforcement Learning
 
-The content is suitable for **PhD coursework, exams (5–15 marks), viva voce, and teaching notes**.
+.
 
 ---
 
