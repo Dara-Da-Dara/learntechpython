@@ -7,7 +7,6 @@ This document presents **core Reinforcement Learning terminology** with:
 - **Real-world examples**
 - **Scope in academic and industry projects**
 
-This format is ideal for **PhD coursework, viva voce, project proposals, and exams**.
 
 ---
 
