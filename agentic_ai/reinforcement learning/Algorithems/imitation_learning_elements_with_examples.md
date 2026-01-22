@@ -1,6 +1,5 @@
 # Imitation Learning – Elements with Symbols, Detailed Explanation, and Real-World Examples
 
-This Markdown document provides a **comprehensive, exam-oriented explanation of the elements of Imitation Learning**, with **mathematical symbols, conceptual roles, and real-life examples**. It is suitable for **PhD coursework, 10–20 mark theory questions, viva voce, and teaching material**.
 
 ---
 
