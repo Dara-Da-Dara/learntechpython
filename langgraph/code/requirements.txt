@@ -1,0 +1,43 @@
+# -----------------------------
+# Core Python Utilities
+# -----------------------------
+python-dotenv
+requests
+numpy
+typing-extensions
+pydantic
+
+# -----------------------------
+# LangGraph & LangChain
+# -----------------------------
+langgraph
+langchain
+langchain-core
+langchain-community
+
+# -----------------------------
+# Hugging Face (LLM + Embeddings)
+# -----------------------------
+transformers
+torch
+accelerate
+huggingface-hub
+sentence-transformers
+
+# -----------------------------
+# Vector Store / Memory
+# -----------------------------
+faiss-cpu
+scikit-learn
+
+# -----------------------------
+# UI & Deployment
+# -----------------------------
+gradio
+
+# -----------------------------
+# Optional (Logging & Debugging)
+# -----------------------------
+tqdm
+rich
+loguru
