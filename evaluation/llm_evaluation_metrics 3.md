@@ -78,14 +78,14 @@ print(scores)
 ---
 
 ## METEOR Code Example
-```python
 from nltk.translate.meteor_score import meteor_score
 
-reference = ["The cat is on the mat"]
-prediction = "The cat sat on the mat"
+reference = [["The", "cat", "is", "on", "the", "mat"]]
+prediction = ["The", "cat", "sat", "on", "the", "mat"]
 
-print(meteor_score(reference, prediction))
-```
+score = meteor_score(reference, prediction)
+print(score)
+
 
 ---
 
