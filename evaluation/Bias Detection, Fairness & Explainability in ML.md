@@ -28,26 +28,7 @@ SHAP (SHapley Additive exPlanations) uses game theory to assign feature importan
 
 ### SHAP Code Example
 
-```python
-import shap
-import xgboost as xgb
-from sklearn.datasets import load_breast_cancer
-from sklearn.model_selection import train_test_split
 
-# Load data (simulate with breast cancer; add 'sex' for bias demo)
-data = load_breast_cancer()
-X_train, X_test, y_train, y_test = train_test_split(data.data, data.target, test_size=0.2)
-
-# Train model
-model = xgb.XGBClassifier().fit(X_train, y_train)
-
-# SHAP explainer
-explainer = shap.TreeExplainer(model)
-shap_values = explainer.shap_values(X_test)
-
-# Summary plot (shows feature impacts)
-shap.summary_plot(shap_values, X_test, feature_names=data.feature_names)
-```
 
 This code generates a beeswarm plot; high SHAP values for sensitive features signal bias.[^1_3][^1_9]
 
