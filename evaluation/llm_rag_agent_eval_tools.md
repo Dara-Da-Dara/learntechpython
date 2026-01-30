@@ -1,4 +1,4 @@
-# LLM, RAG, and Agentic AI Evaluation Platforms
+# LLM, RAG, and Agentic AI Evaluation Platforms 
 
 This document categorizes evaluation platforms for LLMs, RAG, and Agentic AI into **Open Source** and **Proprietary/SaaS**, along with their supported capabilities.
 
